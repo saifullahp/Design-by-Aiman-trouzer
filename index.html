@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Design By Aiman</h1>
+   
+    <button><a href="index.html" >Trouzer</a></button>
+    <input type="text" id="searchbar" placeholder="search">
+</header>
+
+        <section>
+
+<div class="card-container">
+
+   <div class="card">
+<img src="t1.jpg" >
+<p>Trouzer1</p>
+</div>
+<div class="card">
+<img src="t2.jpg" >
+<p>Trouzer2</p>
+</div>
+</div>
+</section>
+<script src="jquery.js"></script>
+<script>
+$("#searchbar").keyup(function(){
+var searchtext = $(this).val().toLowerCase();//am
+$(".card").filter(function(){
+var cardtext = $(this).text().toLowerCase();
+if 
+(cardtext.indexOf(searchtext)>-1){
+$(this).show()
+}
+else
+$(this).hide()
+})
+})
+</script>
+</body>
+</html>
